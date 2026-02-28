@@ -37,6 +37,7 @@ repos:
         language: node
         types: [file]
         files: \.(txt|md|mdown|markdown)$
+        exclude: ^\.claude/
         entry: textlint
         require_serial: false
         additional_dependencies:
