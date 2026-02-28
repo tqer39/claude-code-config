@@ -1,0 +1,48 @@
+{
+  "skill_name": "pull-request",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "PRを作成して。mainブランチに対してお願いします。",
+      "expected_output": "Base branchとしてmainを使用し、rebase → push → gh pr createの一連のフローを実行。日本語のPR説明文が生成され、PR URLが表示される。",
+      "files": [],
+      "expectations": [
+        "git fetch originを実行する",
+        "mainブランチに対してrebaseを実行する",
+        "git pushを実行する（新規ブランチなら-u、既存なら--force-with-lease）",
+        "gh pr createまたはgh pr editを使用してPRを作成/更新する",
+        "PR説明文が日本語で生成される",
+        "PR説明文に📒 変更概要セクションが含まれる",
+        "PR URLが最終的に表示される",
+        "force-push前にユーザーに確認を求める"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "プッシュしてPRの説明を更新して",
+      "expected_output": "既存PRを検出し、gh pr editで説明文を更新する。pushも実行される。",
+      "files": [],
+      "expectations": [
+        "gh pr viewで既存PRの存在を確認する",
+        "git pushを実行する",
+        "gh pr editを使用してPR説明文を更新する",
+        "更新後のPR URLが表示される"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "この変更レビューに出したいんだけど",
+      "expected_output": "カジュアルなリクエストからPR作成ワークフローを起動。base branchを自動検出し、一連のフローを実行。",
+      "files": [],
+      "expectations": [
+        "PRワークフローとして認識し、PR作成フローを開始する",
+        "base branchを自動検出する（main/master/remote HEAD）",
+        "git fetch originを実行する",
+        "rebaseを試みる",
+        "pushを実行する",
+        "PR説明文を生成し、ユーザーに確認を求める",
+        "gh pr createでPRを作成する"
+      ]
+    }
+  ]
+}
