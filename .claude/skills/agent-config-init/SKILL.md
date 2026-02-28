@@ -1,11 +1,11 @@
 ---
 name: agent-config-init
-description: Initialize a unified LLM coding agent configuration. Creates AGENTS.md as the single source of truth and symlinks it to CLAUDE.md, GEMINI.md, .cursorrules, and .github/copilot-instructions.md. Use when the user wants to set up agent config, create AGENTS.md, unify AI tool settings, or bootstrap coding guidelines for a project.
+description: Initialize a unified LLM coding agent configuration. Creates AGENTS.md as the single source of truth and symlinks it to tool-specific config files. Use when the user wants to set up agent config, create AGENTS.md, unify AI tool settings, or bootstrap coding guidelines for a project.
 ---
 
 # Agent Config Init
 
-Create `AGENTS.md` as the single source of truth for LLM coding agent guidelines, then symlink it to each tool's config file. This keeps all agents (Claude Code, Codex, Gemini CLI, Cursor, Copilot) aligned on the same rules with zero duplication.
+Create `AGENTS.md` as the single source of truth for LLM coding agent guidelines. Then symlink it to each tool's config file. This keeps all agents (Claude Code, Codex, Gemini CLI, Cursor, Copilot) aligned on the same rules with zero duplication.
 
 Based on arxiv 2602.11988: concise context files (~32 lines) outperform verbose ones.
 
@@ -17,6 +17,7 @@ Write the following to `AGENTS.md` in the project root:
 # Agent Guidelines
 
 ## Principles
+
 - Always prefer simplicity over pathological correctness
 - YAGNI: do not add functionality until it is necessary
 - KISS: prefer the simplest solution that works
@@ -24,18 +25,21 @@ Write the following to `AGENTS.md` in the project root:
 - No backward-compatibility shims or fallback paths unless they come for free without increasing cyclomatic complexity
 
 ## Code Style
+
 - Follow existing project conventions; do not introduce new patterns gratuitously
 - Prefer standard library solutions over third-party dependencies
 - Write small, focused functions with clear names
 - Comments explain "why", not "what"
 
 ## Changes
+
 - Make the minimal change that solves the problem
 - Do not refactor unrelated code in the same change
 - Do not add speculative features, abstractions, or error handling for impossible scenarios
 - If a test fails, fix the test only if the new behavior is intentionally correct
 
 ## Process
+
 - Read existing code before writing new code
 - Run tests before and after changes
 - Commit messages: imperative mood, concise subject line
@@ -43,12 +47,12 @@ Write the following to `AGENTS.md` in the project root:
 
 ## Symlink Map
 
-| Tool | Target File | Command |
-|------|-------------|---------|
-| Claude Code | `CLAUDE.md` | `ln -sf AGENTS.md CLAUDE.md` |
-| Gemini CLI | `GEMINI.md` | `ln -sf AGENTS.md GEMINI.md` |
-| Cursor | `.cursorrules` | `ln -sf AGENTS.md .cursorrules` |
-| Copilot | `.github/copilot-instructions.md` | `mkdir -p .github && ln -sf ../AGENTS.md .github/copilot-instructions.md` |
+| Tool        | Target File                       | Command                                                                   |
+| ----------- | --------------------------------- | ------------------------------------------------------------------------- |
+| Claude Code | `CLAUDE.md`                       | `ln -sf AGENTS.md CLAUDE.md`                                              |
+| Gemini CLI  | `GEMINI.md`                       | `ln -sf AGENTS.md GEMINI.md`                                              |
+| Cursor      | `.cursorrules`                    | `ln -sf AGENTS.md .cursorrules`                                           |
+| Copilot     | `.github/copilot-instructions.md` | `mkdir -p .github && ln -sf ../AGENTS.md .github/copilot-instructions.md` |
 
 Codex reads `AGENTS.md` natively, so no symlink is needed.
 
