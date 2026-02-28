@@ -8,3 +8,4 @@
 cspell.json
 renovate.json
 tmp/
+.claude/

@@ -54,6 +54,7 @@ curl -sL "https://www.toptal.com/developers/gitignore/api/{comma-separated-templ
 Example: `curl -sL "https://www.toptal.com/developers/gitignore/api/node,python,macos,linux,windows"`
 
 The response is plain text ready to use as `.gitignore` content. It includes marker lines:
+
 - Header: `# Created by https://www.toptal.com/developers/gitignore/api/{templates}`
 - Footer: `# End of https://www.toptal.com/developers/gitignore/api/{templates}`
 
@@ -71,7 +72,7 @@ Create a new `.gitignore` at the project root with the API content as-is.
 
 The existing file contains project-specific custom rules that must be preserved. Construct the new file as:
 
-```
+```text
 {API content}
 
 # Custom rules

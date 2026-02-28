@@ -5,7 +5,7 @@ Scan the project root for the following files and directories to determine which
 ## Languages & Runtimes
 
 | Indicator File/Dir | Template Name |
-|---|---|
+| --- | --- |
 | `package.json` | `node` |
 | `requirements.txt`, `setup.py`, `setup.cfg`, `pyproject.toml`, `Pipfile`, `tox.ini` | `python` |
 | `Cargo.toml` | `rust` |
@@ -32,7 +32,7 @@ Scan the project root for the following files and directories to determine which
 ## Frameworks
 
 | Indicator File/Dir | Template Name |
-|---|---|
+| --- | --- |
 | `next.config.*` | `nextjs` |
 | `nuxt.config.*` | `nuxt` |
 | `angular.json` | `angular` |
@@ -48,7 +48,7 @@ Scan the project root for the following files and directories to determine which
 ## Build Tools & Package Managers
 
 | Indicator File/Dir | Template Name |
-|---|---|
+| --- | --- |
 | `yarn.lock` | `yarn` |
 | `pnpm-lock.yaml` | `pnpm` |
 | `Makefile` | `cmake` |
@@ -59,7 +59,7 @@ Scan the project root for the following files and directories to determine which
 ## Infrastructure & DevOps
 
 | Indicator File/Dir | Template Name |
-|---|---|
+| --- | --- |
 | `*.tf`, `*.tfvars` | `terraform` |
 | `Vagrantfile` | `vagrant` |
 | `Dockerfile`, `docker-compose.yml`, `docker-compose.yaml` | `docker` |
@@ -70,7 +70,7 @@ Scan the project root for the following files and directories to determine which
 ## Editors & IDEs
 
 | Indicator File/Dir | Template Name |
-|---|---|
+| --- | --- |
 | `.idea/` | `jetbrains` |
 | `.vscode/` | `visualstudiocode` |
 | `*.sublime-project`, `*.sublime-workspace` | `sublimetext` |
@@ -82,7 +82,7 @@ Scan the project root for the following files and directories to determine which
 These are always added regardless of detection:
 
 | Template Name |
-|---|
+| --- |
 | `macos` |
 | `linux` |
 | `windows` |
