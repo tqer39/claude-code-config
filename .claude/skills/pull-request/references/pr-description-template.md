@@ -10,6 +10,7 @@ The description language is determined by locale:
 - `en` — English
 
 Locale detection priority:
+
 1. User explicitly requested a language → use that
 2. Conversation language — match the language the user has been using
 3. Default → `ja`
@@ -19,7 +20,7 @@ Locale detection priority:
 A single line. No markdown formatting in the title. Start with a type emoji:
 
 | Emoji | Type |
-|-------|------|
+| ----- | ---- |
 | ✨ | New feature |
 | 🐛 | Bug fix |
 | ♻️ | Refactoring |
@@ -33,6 +34,7 @@ A single line. No markdown formatting in the title. Start with a type emoji:
 | 🗑️ | Removal / deprecation |
 
 Example titles:
+
 - `✨ ユーザー認証機能を追加`
 - `🐛 Fix race condition in payment processing`
 

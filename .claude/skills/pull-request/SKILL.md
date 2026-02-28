@@ -104,6 +104,7 @@ gh pr view --json number,title,body,url 2>/dev/null
 **If a PR already exists:**
 
 Ask the user:
+
 - **Update**: Update the existing PR's title and description (go to Step 6, then use `gh pr edit`).
 - **Skip**: Keep the existing PR as-is and just report the URL.
 
@@ -122,11 +123,13 @@ git diff origin/{base-branch}...HEAD
 Read `references/pr-description-template.md` for the exact format to follow.
 
 **Locale detection** (for description language):
+
 1. If the user explicitly requested a language, use that.
 2. Otherwise, look at the conversation language — if the user has been writing in Japanese, use Japanese (`ja`). If in English, use English (`en`).
 3. Default: `ja` (Japanese).
 
 Generate the PR title and description following the template. The content must be:
+
 - Based only on actual changes (never fabricate or assume changes that don't exist in the diff)
 - Concise but informative
 - Using the correct locale
