@@ -32,14 +32,14 @@ For monorepos, narrow down to specific packages before proceeding. Don't try to 
 Use the Agent tool with `subagent_type=Explore` for thorough exploration. Work through this checklist systematically:
 
 | Area | What to look at |
-|------|----------------|
+| ------ | ---------------- |
 | Structure | Directory layout, module boundaries, entry points |
 | Dependencies | `package.json`, `go.mod`, `requirements.txt`, `Cargo.toml`, etc. — both what's used and what's surprising |
 | Configuration | Environment variables, config files, feature flags |
 | Data | Database schemas, migrations, data flow patterns |
 | Tests | Test structure, coverage patterns, what's tested vs. what isn't |
 | CI/CD | Pipeline definitions, deployment targets, build steps |
-| Git history | Recent churn (`git log --oneline -30`), hot files (`git log --pretty=format: --name-only -100 | sort | uniq -c | sort -rn | head -20`) |
+| Git history | Recent churn (`git log --oneline -30`), hot files (sort by frequency from `git log` output) |
 | Documentation | README, ADRs, inline docs — what's documented vs. what's tribal knowledge |
 
 Not every area applies to every project. Skip what's irrelevant. For small projects (<5 files), a quick read-through replaces this checklist.
@@ -49,7 +49,7 @@ Not every area applies to every project. Skip what's irrelevant. For small proje
 Categorize the project to calibrate the depth of analysis:
 
 | Scale | Heuristic | Approach |
-|-------|-----------|----------|
+| ------- | --------- | -------- |
 | Small | <5 files, single concern | Lightweight analysis. Often the answer is "rewrite it" rather than "redesign it." |
 | Medium | 5-50 files, a few modules | Standard four-phase process. |
 | Large | 50+ files, multiple domains | Focus on the highest-impact subsystem first. Break the redesign into scoped proposals. |
