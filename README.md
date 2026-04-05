@@ -17,7 +17,6 @@ A centralized marketplace that distributes shared skills and commands across ~20
 /plugin install git@tqer39-plugins
 /plugin install security@tqer39-plugins
 /plugin install terraform@tqer39-plugins
-/plugin install python-uv@tqer39-plugins
 ```
 
 ## Usage
@@ -158,14 +157,6 @@ Terraform review, security, and best practices.
 |-------|-------------|
 | tf-review | Review Terraform code for best practices and common mistakes |
 | tf-security | Terraform security review focusing on IAM, networking, and encryption |
-
-### python-uv
-
-Python project workflow using uv package manager.
-
-| Skill | Description |
-|-------|-------------|
-| uv-workflow | Python project workflow using uv package manager |
 
 ## Development
 
