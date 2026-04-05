@@ -131,6 +131,7 @@ Common CI/CD skills shared across all repositories.
 | gitignore | Generate and update .gitignore files with automatic project detection |
 | agent-config-init | Initialize unified LLM coding agent configuration (AGENTS.md) |
 | redesign | Architectural analysis and redesign proposal workflow |
+| auto-merge | Generate auto-approve and auto-merge workflow for PRs with `claude-auto` label |
 
 ### git
 
