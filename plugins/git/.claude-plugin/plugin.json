@@ -1,5 +1,5 @@
 {
   "name": "git",
-  "description": "Git workflow commands: auto-commit and PR creation",
+  "description": "Git workflow commands: auto-commit, branch creation, and PR creation",
   "version": "0.1.0"
 }
