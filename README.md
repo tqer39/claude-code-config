@@ -17,7 +17,6 @@ A centralized marketplace that distributes shared skills and commands across ~20
 /plugin install architecture@tqer39-plugins
 /plugin install marketplace@tqer39-plugins
 /plugin install security@tqer39-plugins
-/plugin install terraform@tqer39-plugins
 /plugin install agent-config@tqer39-plugins
 ```
 
@@ -112,7 +111,6 @@ Add to your project's `.claude/settings.json`:
   },
   "enabledPlugins": {
     "git@tqer39-plugins": true,
-    "terraform@tqer39-plugins": true
   }
 }
 ```
@@ -157,15 +155,6 @@ Security review skills: supply chain, dependency auditing, and vulnerability det
 | Skill | Description |
 |-------|-------------|
 | supply-chain | Audit supply chain security: lockfile integrity, dependency pinning, typosquatting detection, GitHub Actions SHA pinning, vulnerability scanning config |
-
-### terraform
-
-Terraform review, security, and best practices.
-
-| Skill | Description |
-|-------|-------------|
-| tf-review | Review Terraform code for best practices and common mistakes |
-| tf-security | Terraform security review focusing on IAM, networking, and encryption |
 
 ### agent-config
 

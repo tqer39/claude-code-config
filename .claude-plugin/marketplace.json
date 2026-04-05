@@ -32,12 +32,6 @@
       "source": "security",
       "description": "Security review skills: supply chain, dependency auditing, and vulnerability detection",
       "version": "0.1.0"
-    },
-    {
-      "name": "terraform",
-      "source": "terraform",
-      "description": "Terraform review, security, and best practices",
-      "version": "0.1.0"
     }
   ]
 }
