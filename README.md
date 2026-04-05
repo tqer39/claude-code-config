@@ -13,8 +13,9 @@ A centralized marketplace that distributes shared skills and commands across ~20
 /plugin marketplace add tqer39/claude-code-marketplace
 
 # Install plugins
-/plugin install common-ci@tqer39-plugins
 /plugin install git@tqer39-plugins
+/plugin install architecture@tqer39-plugins
+/plugin install marketplace@tqer39-plugins
 /plugin install security@tqer39-plugins
 /plugin install terraform@tqer39-plugins
 /plugin install agent-config@tqer39-plugins
@@ -51,13 +52,13 @@ Install individual plugins by scope:
 
 ```bash
 # User scope (you, all projects) — default
-/plugin install common-ci@tqer39-plugins
+/plugin install git@tqer39-plugins
 
 # Project scope (shared with team via .claude/settings.json)
-/plugin install common-ci@tqer39-plugins --scope project
+/plugin install git@tqer39-plugins --scope project
 
 # Local scope (you, this project only)
-/plugin install common-ci@tqer39-plugins --scope local
+/plugin install git@tqer39-plugins --scope local
 ```
 
 ### Managing plugins
@@ -67,11 +68,11 @@ Install individual plugins by scope:
 /plugin
 
 # Enable/disable without uninstalling
-/plugin enable common-ci@tqer39-plugins
-/plugin disable common-ci@tqer39-plugins
+/plugin enable git@tqer39-plugins
+/plugin disable git@tqer39-plugins
 
 # Uninstall
-/plugin uninstall common-ci@tqer39-plugins
+/plugin uninstall git@tqer39-plugins
 
 # Reload after changes
 /reload-plugins
@@ -110,7 +111,7 @@ Add to your project's `.claude/settings.json`:
     }
   },
   "enabledPlugins": {
-    "common-ci@tqer39-plugins": true,
+    "git@tqer39-plugins": true,
     "terraform@tqer39-plugins": true
   }
 }
@@ -118,26 +119,35 @@ Add to your project's `.claude/settings.json`:
 
 ## Plugins
 
-### common-ci
+### git
 
-Common CI/CD skills shared across all repositories.
+Git workflow commands and skills.
+
+| Type | Name | Description |
+|------|------|-------------|
+| Command | auto-commit | Auto stage and commit with emoji prefix + Japanese summary |
+| Command | create-branch | Create feature branches with naming conventions |
+| Command | create-pr | Create a PR from the current branch with auto push and `claude-auto` label |
+| Command | push | Push changes to remote with safety checks |
+| Skill | gitignore | Generate and update .gitignore files with automatic project detection |
+| Skill | pull-request | Automate GitHub PR workflow with rebase, conflict resolution, and description generation |
+| Skill | auto-merge | Generate auto-approve and auto-merge workflow for PRs with `claude-auto` label |
+
+### architecture
+
+Architecture analysis and redesign proposal skills.
 
 | Skill | Description |
 |-------|-------------|
-| pull-request | Automate GitHub PR workflow with rebase, conflict resolution, and description generation |
-| gitignore | Generate and update .gitignore files with automatic project detection |
 | redesign | Architectural analysis and redesign proposal workflow |
-| auto-merge | Generate auto-approve and auto-merge workflow for PRs with `claude-auto` label |
+
+### marketplace
+
+Marketplace validation and management skills.
+
+| Skill | Description |
+|-------|-------------|
 | marketplace-lint | Lint marketplace for config issues, doc drift, and structural inconsistencies |
-
-### git
-
-Git workflow commands.
-
-| Command | Description |
-|---------|-------------|
-| auto-commit | Auto stage and commit with emoji prefix + Japanese summary |
-| create-pr | Create a PR from the current branch with auto push and `claude-auto` label |
 
 ### security
 
@@ -147,14 +157,6 @@ Security review skills: supply chain, dependency auditing, and vulnerability det
 |-------|-------------|
 | supply-chain | Audit supply chain security: lockfile integrity, dependency pinning, typosquatting detection, GitHub Actions SHA pinning, vulnerability scanning config |
 
-### agent-config
-
-LLM coding agent configuration: AGENTS.md creation and tool-specific symlink management.
-
-| Skill | Description |
-|-------|-------------|
-| agent-config-init | Initialize unified LLM coding agent configuration (AGENTS.md) with symlinks to Claude Code, Cursor, Copilot, Gemini CLI |
-
 ### terraform
 
 Terraform review, security, and best practices.
@@ -163,6 +165,14 @@ Terraform review, security, and best practices.
 |-------|-------------|
 | tf-review | Review Terraform code for best practices and common mistakes |
 | tf-security | Terraform security review focusing on IAM, networking, and encryption |
+
+### agent-config
+
+LLM coding agent configuration: AGENTS.md creation and tool-specific symlink management.
+
+| Skill | Description |
+|-------|-------------|
+| agent-config-init | Initialize unified LLM coding agent configuration (AGENTS.md) with symlinks to Claude Code, Cursor, Copilot, Gemini CLI |
 
 ## Development
 

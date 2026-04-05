@@ -10,27 +10,33 @@
   },
   "plugins": [
     {
-      "name": "common-ci",
-      "source": "common-ci",
-      "description": "Common CI/CD skills shared across all repositories",
-      "version": "0.1.0"
-    },
-    {
-      "name": "terraform",
-      "source": "terraform",
-      "description": "Terraform review, security, and best practices",
-      "version": "0.1.0"
-    },
-    {
       "name": "git",
       "source": "git",
-      "description": "Git workflow commands: auto-commit and PR creation",
+      "description": "Git workflow commands and skills: auto-commit, branch creation, PR creation, push, gitignore, pull-request, and auto-merge",
+      "version": "0.1.0"
+    },
+    {
+      "name": "architecture",
+      "source": "architecture",
+      "description": "Architecture analysis and redesign proposal skills",
+      "version": "0.1.0"
+    },
+    {
+      "name": "marketplace",
+      "source": "marketplace",
+      "description": "Marketplace validation and management skills",
       "version": "0.1.0"
     },
     {
       "name": "security",
       "source": "security",
       "description": "Security review skills: supply chain, dependency auditing, and vulnerability detection",
+      "version": "0.1.0"
+    },
+    {
+      "name": "terraform",
+      "source": "terraform",
+      "description": "Terraform review, security, and best practices",
       "version": "0.1.0"
     }
   ]
