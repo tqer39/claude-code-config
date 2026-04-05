@@ -128,6 +128,7 @@ Claude Code セッション内で実行:
 | gitignore | プロジェクト自動検出による .gitignore の生成・更新 |
 | redesign | アーキテクチャ分析と再設計提案ワークフロー |
 | auto-merge | `claude-auto` ラベル付き PR の自動承認・自動マージワークフロー生成 |
+| marketplace-lint | マーケットプレイスの設定不備・ドキュメント齟齬・構造の整合性を検証 |
 
 ### git
 
