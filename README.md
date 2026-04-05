@@ -32,7 +32,6 @@ Common CI/CD skills shared across all repositories.
 | github-actions | GitHub Actions workflow best practices and troubleshooting |
 | gitignore | Generate and update .gitignore files with automatic project detection |
 | agent-config-init | Initialize unified LLM coding agent configuration (AGENTS.md) |
-| skill-creator | Create, test, and iteratively improve Claude Code skills |
 | redesign | Architectural analysis and redesign proposal workflow |
 
 ### terraform

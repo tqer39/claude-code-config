@@ -32,7 +32,6 @@ claude plugin install python-uv@tqer39-plugins
 | github-actions | GitHub Actions ワークフローのベストプラクティスとトラブルシューティング |
 | gitignore | プロジェクト自動検出による .gitignore の生成・更新 |
 | agent-config-init | 統一 LLM コーディングエージェント設定の初期化（AGENTS.md） |
-| skill-creator | Claude Code スキルの作成・テスト・反復改善 |
 | redesign | アーキテクチャ分析と再設計提案ワークフロー |
 
 ### terraform
