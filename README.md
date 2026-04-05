@@ -130,7 +130,6 @@ Git workflow commands and skills.
 | Command | create-pr | Create a PR from the current branch with auto push and `claude-auto` label |
 | Command | push | Push changes to remote with safety checks |
 | Skill | gitignore | Generate and update .gitignore files with automatic project detection |
-| Skill | editorconfig | Generate and update .editorconfig files with automatic file type detection |
 | Skill | pull-request | Automate GitHub PR workflow with rebase, conflict resolution, and description generation |
 | Skill | auto-merge | Generate auto-approve and auto-merge workflow for PRs with `claude-auto` label |
 
@@ -141,6 +140,7 @@ Architecture analysis and redesign proposal skills.
 | Skill | Description |
 |-------|-------------|
 | redesign | Architectural analysis and redesign proposal workflow |
+| editorconfig | Generate and update .editorconfig files with automatic file type detection |
 
 ### marketplace
 
