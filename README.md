@@ -125,9 +125,6 @@ Common CI/CD skills shared across all repositories.
 | Skill | Description |
 |-------|-------------|
 | pull-request | Automate GitHub PR workflow with rebase, conflict resolution, and description generation |
-| pr-review | Review pull requests for quality, security, and convention compliance |
-| commit-convention | Enforce Conventional Commits format and provide commit message suggestions |
-| github-actions | GitHub Actions workflow best practices and troubleshooting |
 | gitignore | Generate and update .gitignore files with automatic project detection |
 | redesign | Architectural analysis and redesign proposal workflow |
 | auto-merge | Generate auto-approve and auto-merge workflow for PRs with `claude-auto` label |
