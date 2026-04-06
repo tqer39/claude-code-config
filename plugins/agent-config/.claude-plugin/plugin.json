@@ -1,0 +1,5 @@
+{
+  "name": "agent-config",
+  "description": "LLM coding agent configuration: AGENTS.md creation and tool-specific symlink management",
+  "version": "0.1.0"
+}

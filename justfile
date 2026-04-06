@@ -8,4 +8,4 @@ install:
 
 # prek を全ファイルに対して実行
 lint:
-    prek run -a
+    prek run --all-files

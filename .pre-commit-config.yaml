@@ -74,3 +74,12 @@ repos:
     hooks:
       - id: renovate-config-validator
         files: renovate\.json
+
+  - repo: local
+    hooks:
+      - id: bump-plugin-version
+        name: bump plugin version
+        entry: scripts/bump-plugin-version.sh
+        language: script
+        stages: [commit-msg]
+        always_run: true

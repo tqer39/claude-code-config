@@ -1,0 +1,37 @@
+{
+  "name": "tqer39-plugins",
+  "owner": {
+    "name": "tqer39"
+  },
+  "metadata": {
+    "description": "Personal SRE/DevOps plugins for Claude Code",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "git",
+      "source": "./plugins/git",
+      "description": "Git workflow commands and skills: auto-commit, branch creation, PR creation, push, gitignore, pull-request, and auto-merge"
+    },
+    {
+      "name": "architecture",
+      "source": "./plugins/architecture",
+      "description": "Architecture analysis and redesign proposal skills: redesign, editorconfig"
+    },
+    {
+      "name": "marketplace",
+      "source": "./plugins/marketplace",
+      "description": "Marketplace validation and management skills"
+    },
+    {
+      "name": "security",
+      "source": "./plugins/security",
+      "description": "Security review skills: supply chain, dependency auditing, and vulnerability detection"
+    },
+    {
+      "name": "agent-config",
+      "source": "./plugins/agent-config",
+      "description": "LLM coding agent configuration and symlink management"
+    }
+  ]
+}
