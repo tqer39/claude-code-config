@@ -1,0 +1,46 @@
+{
+  "skill_name": "worktree",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "worktreeで新しい機能を開発したい。ユーザー認証の追加です。",
+      "expected_output": "Start フェーズを実行: base branch を検出し、fetch して、feat/add-user-auth-YYMMDD-XXXXXXX ブランチで worktree を作成する",
+      "files": [],
+      "expectations": [
+        "git fetch origin を実行する",
+        "base branch を検出する（main > master > remote HEAD）",
+        "ブランチ名が feat/add-user-auth-<YYMMDD>-<short-hash> 形式になる",
+        "EnterWorktree を使用して worktree を作成する",
+        "worktree 内で base branch の HEAD からブランチを作成する",
+        "結果（パス、ブランチ名、base branch）を表示する"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "作業が終わったのでworktreeを片付けて",
+      "expected_output": "Finish フェーズを実行: 未コミット変更を確認し、push 状態を確認し、PR 作成を提案し、worktree を削除して元のディレクトリに戻る",
+      "files": [],
+      "expectations": [
+        "git status --porcelain で未コミット変更を確認する",
+        "未コミット変更がある場合はコミット/stash/破棄の選択肢を提示する",
+        "未 push のコミットがある場合は push する",
+        "PR 作成するか確認する",
+        "ExitWorktree を使用して worktree を削除する",
+        "元のディレクトリに戻ったことを報告する"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "今あるworktreeの一覧を見せて",
+      "expected_output": "List フェーズを実行: worktree 一覧を取得し、各 worktree の状態を表示し、孤立 worktree があれば prune を提案する",
+      "files": [],
+      "expectations": [
+        "git worktree list を実行する",
+        "各 worktree の dirty/clean 状態を確認する",
+        "各 worktree の最新コミットを表示する",
+        "テーブル形式で結果を表示する",
+        "孤立 worktree がある場合は git worktree prune を提案する"
+      ]
+    }
+  ]
+}
