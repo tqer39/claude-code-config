@@ -32,6 +32,11 @@
       "name": "agent-config",
       "source": "./plugins/agent-config",
       "description": "LLM coding agent configuration and symlink management"
+    },
+    {
+      "name": "skill-matcher",
+      "source": "./plugins/skill-matcher",
+      "description": "UserPromptSubmit hook that auto-invokes skills when user sends a bare skill name"
     }
   ]
 }

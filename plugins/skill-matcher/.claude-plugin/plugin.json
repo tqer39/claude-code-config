@@ -1,0 +1,5 @@
+{
+  "name": "skill-matcher",
+  "description": "UserPromptSubmit フックでユーザー入力がスキル名と完全一致する場合に Skill ツール呼び出しを指示する",
+  "version": "0.1.0"
+}
