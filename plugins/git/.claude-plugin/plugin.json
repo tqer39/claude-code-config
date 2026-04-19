@@ -1,5 +1,5 @@
 {
   "name": "git",
-  "description": "Git workflow commands and skills: auto-commit, branch creation, PR creation, push, gitignore, pull-request, auto-merge, and worktree",
-  "version": "0.1.0"
+  "description": "Git workflow commands and skills: auto-commit, branch creation, PR creation, push, gitignore, pull-request, and auto-merge",
+  "version": "0.2.0"
 }
