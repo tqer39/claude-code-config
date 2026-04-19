@@ -18,6 +18,7 @@ A centralized marketplace that distributes shared skills and commands across ~20
 /plugin install marketplace@tqer39-plugins
 /plugin install security@tqer39-plugins
 /plugin install agent-config@tqer39-plugins
+/plugin install grill-me@tqer39-plugins
 ```
 
 ## Usage
@@ -163,6 +164,16 @@ LLM coding agent configuration: AGENTS.md creation and tool-specific symlink man
 | Skill | Description |
 |-------|-------------|
 | agent-config-init | Initialize unified LLM coding agent configuration (AGENTS.md) with symlinks to Claude Code, Cursor, Copilot, Gemini CLI |
+
+### grill-me
+
+Socratic interviewer skill that grills you on plans/designs until shared understanding is reached.
+
+| Skill | Description |
+|-------|-------------|
+| grill-me | Interview user relentlessly about a plan or design, walking down each branch of the decision tree to reach shared understanding |
+
+Upstream: [mattpocock/skills](https://github.com/mattpocock/skills) (MIT License).
 
 ## Development
 
