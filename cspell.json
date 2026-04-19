@@ -162,6 +162,7 @@
     "pyproject",
     "Rakefile",
     "raycast",
+    "reflog",
     "remotehub",
     "renovaterc",
     "requestes",
